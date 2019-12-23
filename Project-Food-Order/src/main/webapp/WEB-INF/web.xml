@@ -1,0 +1,98 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<element>
+<web-app>
+  	<display-name>Archetype Created Web Application</display-name>
+  
+ 
+  <servlet>
+  	<servlet-name>AddItem</servlet-name>
+  	<display-name>AddItem</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.AddItem</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddItemBean</servlet-name>
+  	<display-name>AddItemBean</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.AddItemBean</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminPage</servlet-name>
+  	<display-name>AdminPage</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.AdminPage</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CartFillClass</servlet-name>
+  	<display-name>CartFillClass</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.CartFillClass</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CheckoutPage</servlet-name>
+  	<display-name>CheckoutPage</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.CheckoutPage</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DBManager</servlet-name>
+  	<display-name>DBManager</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.DBManager</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DelItemCart</servlet-name>
+  	<display-name>DelItemCart</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.DelItemCart</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Food_Beverage</servlet-name>
+  	<display-name>Food_Beverage</display-name>
+  	<description></description>
+  	<servlet-class>com.saptrv.Food_Beverage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddItem</servlet-name>
+  	<url-pattern>/AddItem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddItemBean</servlet-name>
+  	<url-pattern>/AddItemBean</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminPage</servlet-name>
+  	<url-pattern>/AdminPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CartFillClass</servlet-name>
+  	<url-pattern>/CartFillClass</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CheckoutPage</servlet-name>
+  	<url-pattern>/CheckoutPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DBManager</servlet-name>
+  	<url-pattern>/DBManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DelItemCart</servlet-name>
+  	<url-pattern>/DelItemCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Food_Beverage</servlet-name>
+  	<url-pattern>/Food_Beverage</url-pattern>
+  </servlet-mapping>
+ 
+ <welcome-file-list>
+    <welcome-file></welcome-file>
+  </welcome-file-list>
+  
+ 
+ 
+</web-app>
+
+</element>
