@@ -1,12 +1,16 @@
 package com.saptrv;
 
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Base64;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,6 +32,10 @@ public class Food_Fruits extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		Food_Dao fd = new Food_Dao();
+		Blob blob = null;
+
+		
 		PrintWriter out=response.getWriter();
 		int count=0;
 		Connection cn=DBManager.getConnection();
@@ -75,11 +83,25 @@ public class Food_Fruits extends HttpServlet {
 			{
 				if(rs2.next())
 				{
+					blob = rs2.getBlob("img");
+					
+					InputStream inputStream = blob.getBinaryStream();
+					ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+			        byte[] buffer = new byte[4096];
+			        int bytesRead = -1;
+			         
+			        while ((bytesRead = inputStream.read(buffer)) != -1) {
+			            outputStream.write(buffer, 0, bytesRead);                  
+			        }
+			         
+			        byte[] imageBytes = outputStream.toByteArray();
+			        String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+					
 					out.println("<div class=\"col-sm-4\">\r\n" + 
 							"			<div style=\"background-color: cornsilk; width: 350px; border-radius: 10%; opacity: 0.9;\">\r\n" +
 							"			<form method=\"post\" action=\"FoodToCart\" class='FoodToCart'>\r\n" + 
 							"			<input type=\"hidden\" name=\"foodType\" value=\"Fruits & Salads\" class=\"foodType\"/>\r\n" + 
-							"    		<br/><center><img src=\"RetrivedFood/"+rs2.getString("FILENAME")+"\" height=\"300px\" width=\"300px\"/></center><input type=\"hidden\" name=\"fileName\" value="+rs2.getString("FILENAME")+" class=\"fileName\"/>\r\n" + 
+							"    		<br/><center><img src=\"data:image/jpg;base64,"+base64Image+"\" height=\"300px\" width=\"300px\"/></center>\r\n" + 
 							"    		<center><h3 style=\"color: darkred;\"><b>&#8226;"+rs2.getString("NAME")+"&#8226;</b></h3></center><input type=\"hidden\" name=\"foodName\" value="+rs2.getString("NAME")+" class=\"foodName\"/><h3 style=\"color: darkred;display:inline;margin-left:45px;\">&#8377;"+rs2.getFloat("PAY")+"</h3><input type=\"hidden\" name=\"price\" value="+rs2.getFloat("PAY")+" class=\"price\"/>"
 									+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 							"				<button type=\"submit\" class=\"submit\" style=\"border-radius: 10%; width: 120px;\"><span class=\"glyphicon glyphicon-shopping-cart\"></span>Add to Cart</button>\r\n" + 

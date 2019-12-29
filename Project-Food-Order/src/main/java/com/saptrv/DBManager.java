@@ -8,7 +8,7 @@ static Connection cn;
 public static java.sql.Connection getConnection()
 {
 	try {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/foodorder", "root", "manager");
 		
 	}catch(Exception ee)

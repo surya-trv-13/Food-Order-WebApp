@@ -1,7 +1,8 @@
 package com.saptrv;
 
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
@@ -32,20 +33,27 @@ public class AddItem extends HttpServlet {
 		String description=request.getParameter("descrip");
 		
 		Part part=request.getPart("image");
-		String filen=part.getSubmittedFileName();
-		String name1=filen.substring(filen.lastIndexOf("\\")+1);
-		String fileName=name1;
-		String savepath="D:\\AdvJava\\Project-Food-Order\\src\\main\\webapp\\RetrivedFood"+File.separator+fileName;
-		new File(savepath);
-		part.write(savepath+File.separator);
+//		String filen=part.getSubmittedFileName();
+//		System.out.println(filen);
+		//converting the path int img
+		InputStream img = part.getInputStream();
+		
+//		Part part=request.getPart("image");
+//		String filen=part.getSubmittedFileName();
+//		String name1=filen.substring(filen.lastIndexOf("\\")+1);
+//		String fileName=name1;
+//		String savepath="D:\\AdvJava\\Project-Food-Order\\src\\main\\webapp\\RetrivedFood"+File.separator+fileName;
+//		new File(savepath);
+//		part.write(savepath+File.separator);
 		
 		
 		AddItemBean ab=new AddItemBean();
 		ab.setDesc(description);
 		ab.setName(name);
 		ab.setPrice(price);
-		ab.setSavepath(savepath);
-		ab.setFilename(fileName);
+		ab.setImg(img);
+//		ab.setSavepath(savepath);
+//		ab.setFilename(fileName);
 		boolean b=false;
 		try {
 			b=ab.valid();
