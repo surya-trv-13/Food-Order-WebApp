@@ -1,6 +1,5 @@
 package com.saptrv;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -24,8 +23,7 @@ public class LoginBean {
 	}
 	public boolean valid() throws Exception
 	{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection cn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","manager");
+		Connection cn=DBManager.getConnection();
 		PreparedStatement ps=cn.prepareStatement("select * from account where email=(?) and pass=(?)");
 		ps.setString(1, email);
 		ps.setString(2, pass);

@@ -1,12 +1,16 @@
 package com.saptrv;
 
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Base64;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,6 +32,7 @@ public class ShoppingCart extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Blob blob = null;
 		PrintWriter out=response.getWriter();
 		int count=0;
 		float sum=0;
@@ -65,11 +70,26 @@ public class ShoppingCart extends HttpServlet {
 				for(int i=0;i<count;i++)
 				{
 					if(rs1.next()) {
+						//Convertion of blob to Base 64 Image  to see it on the FoodPage
+						blob = rs1.getBlob("img");
+						
+						InputStream inputStream = blob.getBinaryStream();
+						ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+				        byte[] buffer = new byte[4096];
+				        int bytesRead = -1;
+				         
+				        while ((bytesRead = inputStream.read(buffer)) != -1) {
+				            outputStream.write(buffer, 0, bytesRead);                  
+				        }
+				         
+				        byte[] imageBytes = outputStream.toByteArray();
+				        String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+
 					out.println("<tr class=\"p1\">\r\n" + 
 							"							<th data-th=\"Product\">\r\n" + 
 							"								<div class=\"row\">\r\n" + 
 							"                                    <div class=\"col-sm-5\">\r\n" + 
-							"										<h4 class=\"nomargin\"><img src=\"RetrivedFood/"+rs1.getString("FILENAME")+"\" width=\"80px\" height=\"80px\" style=\"border-radius: 20px\"></h4>\r\n" + 
+							"										<h4 class=\"nomargin\"><img src=\"data:image/jpg;base64,"+base64Image+"\" width=\"80px\" height=\"80px\" style=\"border-radius: 20px\"></h4>\r\n" + 
 							"									</div>\r\n" + 
 							"									<div class=\"col-sm-7 text-center\">\r\n" + 
 							"										<h4 class=\"nomargin\" style=\"font-family: Elephant;color:coral\">"+rs1.getString("NAME")+"</h4><br/>\r\n" + 

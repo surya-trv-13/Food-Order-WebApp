@@ -98,7 +98,7 @@ public class Food_Beverage extends HttpServlet {
 							"			<div style=\"background-color: cornsilk; width: 350px; border-radius: 10%; opacity: 0.9;\">\r\n" +
 							"			<form method=\"post\" action=\"FoodToCart\" class='FoodToCart'>\r\n" + 
 							"			<input type=\"hidden\" name=\"foodType\" value=\"Beverage\" class=\"foodType\"/>\r\n" + 
-							"    		<br/><center><img src=\"data:image/jpg;base64,"+base64Image+"\" height=\"300px\" width=\"300px\"/></center>\r\n" + 
+							"    		<br/><center><img src=\"data:image/jpg;base64,"+base64Image+"\" height=\"300px\" width=\"300px\"/></center><input type=\"hidden\" name=\"image\" value="+base64Image+" class=\"image\"/>\r\n" + 
 							"    		<center><h3 style=\"color: darkred;\"><b>&#8226;"+rs2.getString("NAME")+"&#8226;</b></h3></center><input type=\"hidden\" name=\"foodName\" value="+rs2.getString("NAME")+" class=\"foodName\"/><h3 style=\"color: darkred;display:inline;margin-left:45px;\">&#8377;"+rs2.getFloat("PAY")+"</h3><input type=\"hidden\" name=\"price\" value="+rs2.getFloat("PAY")+" class=\"price\"/>"
 									+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 							"				<button type=\"submit\" class=\"submit\" style=\"border-radius: 10%; width: 120px;\"><span class=\"glyphicon glyphicon-shopping-cart\"></span>Add to Cart</button>\r\n" + 

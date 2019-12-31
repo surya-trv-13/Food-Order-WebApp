@@ -1,6 +1,5 @@
 package com.saptrv;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -35,7 +34,8 @@ public class AddItem extends HttpServlet {
 		Part part=request.getPart("image");
 //		String filen=part.getSubmittedFileName();
 //		System.out.println(filen);
-		//converting the path int img
+
+//		converting the path int img
 		InputStream img = part.getInputStream();
 		
 //		Part part=request.getPart("image");

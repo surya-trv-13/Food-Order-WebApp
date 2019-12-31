@@ -1,12 +1,21 @@
 package com.saptrv;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 public class FoodToCartBean {
+	Blob image;
 	float pay;
 	String filename,name,type;
 	boolean b=false;
 	
+
+	public Blob getImage() {
+		return image;
+	}
+	public void setImage(Blob image) {
+		this.image = image;
+	}
 	public float getPay() {
 		return pay;
 	}
@@ -37,7 +46,7 @@ public class FoodToCartBean {
 		PreparedStatement ps=cn.prepareStatement("insert into TEMPCART values (?,?,?,?)");
 		ps.setString(1, name);
 		ps.setString(2, type);
-		ps.setString(3, filename);
+		ps.setBlob(3, image);
 		ps.setFloat(4, pay);
 		int i=ps.executeUpdate();
 		if(i!=0)

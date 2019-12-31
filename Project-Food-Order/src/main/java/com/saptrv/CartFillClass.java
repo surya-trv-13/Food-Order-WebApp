@@ -43,7 +43,7 @@ public class CartFillClass {
 		ps.setLong(2, orderNo);
 		ps.setString(3, rs.getString("NAME"));
 		ps.setString(4, rs.getString("TYPE"));
-		ps.setString(5, rs.getString("FILENAME"));
+		ps.setBlob(5, rs.getBlob("IMG"));
 		ps.setFloat(6, rs.getFloat("PRICE"));
 		ps.executeUpdate();
 		ps.close();

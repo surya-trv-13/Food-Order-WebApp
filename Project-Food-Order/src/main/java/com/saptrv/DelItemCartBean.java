@@ -24,7 +24,7 @@ public class DelItemCartBean {
 		{
 			
 		}
-		cn.commit();
+//		cn.commit();
 		ps.close();
 		cn.close();
 	}

@@ -15,11 +15,11 @@
     <script type="text/javascript">
     $(document).ready(function(){
     	var foodName=0;
-    	var fileName=0;
+    	var image=0;
     	var price=0.0;
     	var foodType=0;
     	$(".submit").click(function(lol){
-    		fileName=$(this).prev().prev().prev().prev().prev('.fileName').val();
+    		image=$(this).prev().prev().prev().prev().prev('.image').val();
     		foodName=$(this).prev().prev().prev('.foodName').val();
     		price=$(this).prev('.price').val();
     		foodType=$(this).prev().prev().prev().prev().prev().prev().prev().prev('.foodType').val();
@@ -27,7 +27,7 @@
     			 url: 'FoodToCart',
     			 type: 'POST',
     			 data:{
-    				 fileName:fileName,
+    				 image:image,
     				 price:price,
     				 foodName:foodName,
     				 foodType:foodType
