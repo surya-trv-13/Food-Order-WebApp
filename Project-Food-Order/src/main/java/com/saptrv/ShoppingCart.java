@@ -117,7 +117,7 @@ public class ShoppingCart extends HttpServlet {
 				out.println("</tbody>\r\n" + 
 						"					<tfoot>\r\n" + 
 						"						<tr>\r\n" + 
-						"							<td><a href=\"Home\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n" + 
+						"							<td><a href=\"/Project-Food-Order/\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n" + 
 						"							<td colspan=\"2\" class=\"hidden-xs\"></td>\r\n" + 
 						"							<td class=\"hidden-xs text-center totalpay\"><strong>"+sum+"</strong></td>\r\n" + 
 						"							<td><form action='TakePrice' method='POST'><input type=hidden value="+sum+" class='priceTotal'>"+

@@ -54,7 +54,7 @@ public class Home extends HttpServlet {
 							"<div class=\"\" align=\"left\">\r\n" + 
 							"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 							"    \r\n" + 
-							"        <a href=\"Home\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
+							"        <a href=\"\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
 							"        <a href=\"#shop\"><button type=\"button\" value=\"Home\" class=\"menub\">Shop</button></a>\r\n" + 
 							"        <a href=\"#contact\"><button type=\"button\" value=\"Contact Us\" class=\"menub\">Contact Us</button></a>\r\n" + 
 							"<a href=\"Logout\" ><button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"hola();\">Log-out/"+rs.getString("NAME")+"</button></a>"+ 
@@ -67,7 +67,7 @@ public class Home extends HttpServlet {
 							"    </div>\r\n" + 
 							"</div>\r\n" + 
 							"");
-					RequestDispatcher rd=request.getRequestDispatcher("/Home.html");
+					RequestDispatcher rd=request.getRequestDispatcher("/home.html");
 					rd.include(request, response);
 				}
 				
@@ -77,10 +77,10 @@ public class Home extends HttpServlet {
 		}else {
 			out.println("<div class=\"banner\" id=\"home\">\r\n" + 
 					"<img src=\"images/Logo.jpg\" height=\"200\" style=\"margin-left: 370px;\">\r\n" + 
-					"<div class=\"\" align=\"left\">\r\n" + 
+					"<div class=\"/Project-Food-Order/\" align=\"left\">\r\n" + 
 					"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 					"    \r\n" + 
-					"        <a href=\"Home\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
+					"        <a href=\"/Project-Food-Order/\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
 					"        <a href=\"#shop\"><button type=\"button\" value=\"Home\" class=\"menub\">Shop</button></a>\r\n" + 
 					"        <a href=\"#contact\"><button type=\"button\" value=\"Contact Us\" class=\"menub\">Contact Us</button></a>\r\n" + 
 					"        <a href=\"#login\"><button type=\"button\" value=\"Home\" class=\"menub\">Log-in</button></a>\r\n" + 

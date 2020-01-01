@@ -93,7 +93,7 @@
     <div class="head1"><center><img src="images/Logo.jpg" height="200"></center></div>
     <div class="head2" align="right">
     <div class="menu">
-        <button type="button" value="Home" class="menub">Home</button>
+        <button type="button" value="Home" class="menub" onclick="window.location.href=('/Project-Food-Order/')">Home</button>
         
         <button type="button" value="Home" class="menub" onclick="window.location.href=('login.jsp')">Log-in</button>
         <button type="button" value="Contact Us" class="menub" onclick="window.location.href=('contact.html')";>Contact Us</button>
@@ -123,7 +123,7 @@
         </fieldset>
         </form>
                 <h4 class="ald">Don't have any account?</h4>
-                <button style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('signup.html')";>Signup</button>
+                <button style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('Register.jsp')";>Signup</button>
 	<br><br>
         
     </div></center>

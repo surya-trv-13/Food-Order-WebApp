@@ -61,7 +61,7 @@ public class UserInfo extends HttpServlet {
 							"<div class=\"\" align=\"left\">\r\n" + 
 							"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 							"    \r\n" + 
-							"        <button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"window.location.href=('Home');\">Home</button>\r\n" + 
+							"        <button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"window.location.href=('/Project-Food-Order/');\">Home</button>\r\n" + 
 							"        <button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"goal();\">Log-Out</button>\r\n" + 
 							"        <button type=\"button\" value=\"Contact Us\" class=\"menub\" onclick=\"window.location.href=('contact.html');\">Contact Us</button>\r\n" + 
 							"</div>\r\n" + 

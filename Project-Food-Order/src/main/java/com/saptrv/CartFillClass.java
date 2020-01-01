@@ -50,7 +50,7 @@ public class CartFillClass {
 		}
 		pstemp.close();
 		pstemp=cn.prepareStatement("delete from TEMPCART");
-		cn.commit();
+
 		
 		pstemp.close();
 		cn.close();

@@ -63,7 +63,7 @@ public class Food_Combo extends HttpServlet {
 					"<img src=\"images/Logo.jpg\" height=\"200\" style='margin-left:370px'>\r\n" + 
 					"<div class=\"\" align=\"left\">\r\n" + 
 					"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" +  
-					"        <a href=\"Home\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
+					"        <a href=\"/Project-Food-Order/\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
 					"        <a href=\"Food_Combo\"><button type=\"button\" value=\"Home\" class=\"menub\">Shop</button></a>\r\n" + 
 					"        <a href=\"Login.jsp\"><button type=\"button\" value=\"Home\" class=\"menub\">Log-in</button></a>\r\n" + 
 					"        <a href=\"contact.html\"><button type=\"button\" value=\"Contact Us\" class=\"menub\">Contact Us</button></a>\r\n" + 

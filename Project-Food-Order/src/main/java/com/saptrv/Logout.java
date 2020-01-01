@@ -29,10 +29,10 @@ public class Logout extends HttpServlet {
 			session.invalidate();
 			session=null;
 			System.out.println(session+"this is the session");
-			RequestDispatcher rd=request.getRequestDispatcher("/Home");
+			RequestDispatcher rd=request.getRequestDispatcher("/");
 			rd.forward(request, response);
 		}else {
-			RequestDispatcher rd=request.getRequestDispatcher("/Home");
+			RequestDispatcher rd=request.getRequestDispatcher("/");
 			rd.forward(request, response);
 		}
 	}

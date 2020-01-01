@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("Email", email);
 			
 			System.out.println("Inside Login");
-			response.sendRedirect("/PROJECT_FOOD_ORDER/UserInfo");
+			response.sendRedirect("/Project-Food-Order/UserInfo");
 			//RequestDispatcher rd=request.getRequestDispatcher("/Home");
 			//rd.forward(request, response);
 	    	}else {

@@ -130,7 +130,7 @@
     <div class="head1"><center><img src="images/Logo.jpg" height="200"></center></div>
     <div class="head2" align="right">
     <div class="menu">
-        <a href="Home"><button type="button" value="Home" class="menub">Home</button></a>
+        <a href="/Project-Food-Order/"><button type="button" value="Home" class="menub">Home</button></a>
         <button type="button" value="Home" class="menub" onclick="window.location.href=('login.jsp')">Log-in</button>
         <button type="button" value="Contact Us" class="menub" onclick="window.location.href=('contact.html')";>Contact Us</button>
     </div>

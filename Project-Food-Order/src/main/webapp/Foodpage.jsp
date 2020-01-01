@@ -146,7 +146,7 @@
 				<a href="#" class="clsbtn" onclick="close1()">&times;</a> 
 				<img src="images/Logo.jpg" width="140px" height="80px" style="padding-left: 20px;"/> 
 				<br><br><br> 
-				<a href="Home">Home</a>
+				<a href="/Project-Food-Order/"></a>
 				<a href="Food_Combo">Combo</a> 
 				<a href="Food_Others">Others</a> 
 				<a href="Food_Snacks">Snacks</a>

@@ -75,8 +75,8 @@ public class OrderConfirmPage extends HttpServlet {
 				"<div class=\"\" align=\"left\">\r\n" + 
 				"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 				"    \r\n" + 
-				"        <a href='Home' style='text-decoration:none;'><button type=\"button\" value=\"Home\" class=\"menub\"\">Home</button></a>\r\n" + 
-				"        <a href='Logout' style='text-decoration:none;'><button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"goal();\">Log-Out</button></a>\r\n" + 
+				"        <a href=\"/Project-Food-Order/\" style='text-decoration:none;'><button type=\"button\" value=\"Home\" class=\"menub\"\">Home</button></a>\r\n" + 
+				"        <a href=\"Logout\" style='text-decoration:none;'><button type=\"button\" value=\"Home\" class=\"menub\" onclick=\"goal();\">Log-Out</button></a>\r\n" + 
 				"        <button type=\"button\" value=\"Contact Us\" class=\"menub\" onclick=\"window.location.href=('Home');\">Contact Us</button>\r\n" + 
 				"</div>\r\n" + 
 				"</div>");

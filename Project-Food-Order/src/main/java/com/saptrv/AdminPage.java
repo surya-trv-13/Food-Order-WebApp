@@ -69,7 +69,7 @@ public class AdminPage extends HttpServlet {
 				"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" + 
 				"    \r\n" + 
 				"        <a href=\"#\"><button type=\"button\" value=\"Home\" class=\"menub\">Admin Home</button></a>\r\n" +
-				"		 <a href=\"Home\"><button type=\"button\" value=\"Home\" class=\"menub\" >Log_Out</button></a>\r\n" +
+				"		 <a href=\"/Project-Food-Order/\"><button type=\"button\" value=\"Home\" class=\"menub\" >Log_Out</button></a>\r\n" +
 				"        <a href=\"contact.html\"><button type=\"button\" value=\"Contact Us\" class=\"menub\" disabled>Contact Us</button></a>\r\n" + 
 				"</div>\r\n" + 
 				"</div>\r\n");

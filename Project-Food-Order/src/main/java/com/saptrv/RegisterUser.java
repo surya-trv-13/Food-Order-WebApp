@@ -47,7 +47,7 @@ public class RegisterUser extends HttpServlet {
 			rd.forward(request, response);
 		}else {
 			out.println("<h1>Something happened from our side!!<h1>");
-			RequestDispatcher rd=request.getRequestDispatcher("/RegisterUser.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("/Register.jsp");
 			rd.include(request, response);
 		}
 	}

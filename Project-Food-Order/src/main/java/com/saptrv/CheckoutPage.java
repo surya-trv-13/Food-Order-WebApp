@@ -47,7 +47,7 @@ public class CheckoutPage extends HttpServlet {
 				"            <th style=\"width: 50%; color: black; font-size: 20px; font-family: Courier;\";>Cardholder's Name: </th>\r\n" + 
 				"            <th style=\"width: auto;\" colspan=\"4\"><input type=\"text\" name=\"c5\" placeholder=\"Enter Cardholder's Name\" class=\"design\" required>\r\n" + 
 				"        </tr><tr><th colspan=\"5\">&nbsp;</th></tr>\r\n" + 
-				"        <th style=\"width: 50%; color: black; font-size: 20px; font-family: Courier;\">Expiery Date:</th>\r\n" + 
+				"        <th style=\"width: 50%; color: black; font-size: 20px; font-family: Courier;\">Expiry Date:</th>\r\n" + 
 				"        <th colspan=\"2\" style=\"width: auto;\"><select class=\"design\" name=\"c6\" required><option>Month</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></th>\r\n" + 
 				"        <th colspan=\"2\" style=\"width: auto;\"><select class=\"design\" name=\"c7\"><option>Year</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option></select></th><tr><th colspan=\"5\">&nbsp;</th></tr>\r\n" + 
 				"        <tr>\r\n" + 

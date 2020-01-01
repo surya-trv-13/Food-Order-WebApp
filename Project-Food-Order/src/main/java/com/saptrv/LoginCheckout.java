@@ -15,7 +15,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LoginCheckout")
 public class LoginCheckout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+     
+	public static int check = 0;
     public LoginCheckout() {
         super();
        

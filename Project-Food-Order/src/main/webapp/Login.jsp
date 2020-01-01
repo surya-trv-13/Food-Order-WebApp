@@ -93,7 +93,7 @@
     <div class="head1"><center><img src="images/Logo.jpg" height="200"></center></div>
     <div class="head2" align="right">
     <div class="menu">
-        <a href="Home" style="text-decoration:none;"><button type="button" value="Home" class="menub">Home</button></a>
+        <a href="/Project-Food-Order/" style="text-decoration:none;"><button type="button" value="Home" class="menub">Home</button></a>
         <button type="button" value="Contact Us" class="menub" onclick="window.location.href=('contact.html')";>Contact Us</button>
     </div>
         <marquee behavior="alternate"><h1 style="color: brown; font-family: Comic Sans MS;"><b>We Serve Best Quality...</b></h1></marquee>

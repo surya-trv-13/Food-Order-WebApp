@@ -33,6 +33,13 @@ public class Food_Beverage extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Blob blob = null;
+		String base64Image = null;
+		InputStream inputStream;
+		ByteArrayOutputStream outputStream;
+		byte[] buffer = new byte[4096];
+        int bytesRead = -1;
+        byte[] imageBytes = null ;
+		
 		PrintWriter out=response.getWriter();
 		int count=0;
 		Connection cn=DBManager.getConnection();
@@ -62,7 +69,7 @@ public class Food_Beverage extends HttpServlet {
 					"<img src=\"images/Logo.jpg\" height=\"200\" style='margin-left: 370px'>\r\n" + 
 					"<div class=\"\" align=\"left\">\r\n" + 
 					"         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n" +  
-					"        <a href=\"Home\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
+					"        <a href=\"/Project-Food-Order/\"><button type=\"button\" value=\"Home\" class=\"menub\">Home</button></a>\r\n" + 
 					"        <a href=\"Food_Beverage\"><button type=\"button\" value=\"Home\" class=\"menub\">Shop</button></a>\r\n" + 
 					"        <a href=\"Login.jsp\"><button type=\"button\" value=\"Home\" class=\"menub\">Log-in</button></a>\r\n" + 
 					"        <a href=\"contact.html\"><button type=\"button\" value=\"Contact Us\" class=\"menub\">Contact Us</button></a>\r\n" + 
@@ -83,17 +90,15 @@ public class Food_Beverage extends HttpServlet {
 					//Convertion of blob to Base 64 Image  to see it on the FoodPage
 					blob = rs2.getBlob("img");
 					
-					InputStream inputStream = blob.getBinaryStream();
-					ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-			        byte[] buffer = new byte[4096];
-			        int bytesRead = -1;
+					inputStream = blob.getBinaryStream();
+					outputStream = new ByteArrayOutputStream();
 			         
 			        while ((bytesRead = inputStream.read(buffer)) != -1) {
 			            outputStream.write(buffer, 0, bytesRead);                  
 			        }
 			         
-			        byte[] imageBytes = outputStream.toByteArray();
-			        String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+			        imageBytes = outputStream.toByteArray();
+			        base64Image = Base64.getEncoder().encodeToString(imageBytes);
 					out.println("<div class=\"col-sm-4\">\r\n" + 
 							"			<div style=\"background-color: cornsilk; width: 350px; border-radius: 10%; opacity: 0.9;\">\r\n" +
 							"			<form method=\"post\" action=\"FoodToCart\" class='FoodToCart'>\r\n" + 
